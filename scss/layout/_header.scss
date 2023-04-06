@@ -1,0 +1,75 @@
+.header {
+  margin-top: 4em;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1 {
+    @include font(2.8rem, 3.4rem, 700);
+    margin-bottom: 0.6rem;
+  }
+
+  p {
+    @include font(1.4rem, 1.7rem, 700);
+    color: #8c98c6;
+  }
+  ul {
+    display: flex;
+    gap: 0.7rem;
+  }
+  hr {
+    display: none;
+  }
+  h6 {
+    @include font(1.4rem, 1.7rem, 700);
+    color: #8c98c6;
+    margin-top: 5px;
+  }
+  .toggle {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    background: linear-gradient(225deg, #40db82 0%, #388fe7 98.02%);
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .toggle::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #252b42;
+    border-radius: 50%;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+  .toggle.active::before {
+    background-color: #fff;
+    left: calc(100% - 18px - 3px);
+  }
+  @include responsive(mobile) {
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+    h1 {
+      @include font(2.4rem, 2.9rem, 700);
+    }
+
+    hr {
+      margin-top: 2.4rem;
+      margin-bottom: 1.9rem;
+      display: block;
+      color: #333a55;
+      width: 326px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

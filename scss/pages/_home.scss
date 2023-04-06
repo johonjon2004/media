@@ -1,0 +1,116 @@
+.hero {
+  &__container {
+    margin-top: 4.6rem;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+  }
+  .hero__grid__item {
+    width: 255px;
+    height: 216px;
+    background: #252b42;
+    border-radius: 5px;
+    padding: 30px 60px;
+  }
+
+  &__grid__item:hover {
+    background: #333a55;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1.9rem;
+  }
+  .text {
+    padding-top: 3rem;
+    @include font(5.6rem, 4.8rem, 700);
+    text-align: center;
+  }
+
+  h5 {
+    @include font(1.2rem, 1.5rem, 400);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #8c98c6;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  p {
+    @include font(1.2rem, 1.5rem, 700);
+    color: #8c98c6;
+  }
+  .rasm {
+    padding-top: 2.5rem;
+    margin-left: 3rem;
+  }
+  .item1 {
+    border-top: 4px solid #178ff5;
+  }
+  .item2 {
+    border-top: 4px solid #1da1f2;
+  }
+  .item3 {
+    border-top: 4px solid #ee877e;
+  }
+  .item4 {
+    border-top: 4px solid #c4032b;
+  }
+  @include responsive(mobile) {
+    .hero__grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__grid__item {
+      width: 326px;
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+.overview {
+  margin-top: 4.6rem;
+  h1 {
+    @include font(2.4rem, 2.9rem, 700);
+    margin-bottom: 2.4rem;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+  }
+  &__grid__item {
+    width: 255px;
+    height: 125px;
+    background: #252b42;
+    border-radius: 5px;
+    padding: 28px;
+    margin-bottom: 2.4rem;
+  }
+  &__grid__item:hover {
+    background: #333a55;
+    cursor: pointer;
+  }
+
+  &__list {
+    margin-bottom: 2.3rem;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @include responsive(mobile) {
+    &__grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__grid__item {
+      width: 326px;
+    }
+  }
+}
